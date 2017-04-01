@@ -13,7 +13,8 @@
     "release": "NODE_ENV=production ./bin/release",
     "sign": "./bin/sign",
     "unsign": "./bin/unsign",
-    "tomedis": "./bin/tomedis"
+    "tomedis": "./bin/tomedis",
+    "pack": "./node_modules/webpack/bin/webpack.js --progress && ./node_modules/electron-packager/cli.js . medis --electron-version 0.35.6 --overwrite true --asar true --arch x64 --platform linux --platform win32 --platform darwin"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,7 @@
     "conventional-github-releaser": "^0.5.3",
     "css-loader": "^0.19.0",
     "cz-conventional-changelog": "^1.1.5",
+    "electron-packager": "8.6.0",
     "eslint-plugin-react": "^3.15.0",
     "github": "^0.2.4",
     "jsx-loader": "^0.13.2",
